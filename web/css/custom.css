@@ -1,0 +1,38 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16-dic-2013, 8:59:01
+    Author     : al037294
+*/
+
+.navbar-inverse{
+    background: url('../img/header_bg_run.jpg') repeat ;
+    color: white;
+    border: 0px;
+    
+    
+}
+
+.navbar-inverse .navbar-nav>li>a{
+    color: rgb(149,202,234);
+}
+
+.navbar-nav{
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+}
+
+li + li:before {
+  content: "|";
+}
+
+.navbar-inverse .navbar-nav>li{
+    display: inline-block;
+    padding: 5px 5px 5px 5px;
+    margin: 10px 10px;
+    list-style: none;
+}
