@@ -1,0 +1,215 @@
+@charset "utf-8";
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+
+/*---COMENZAMOS DEFINIENDO UN ESTILO DE LETRA COMÚN AL DOCUMENTO--------------------------------------------------------------------*/
+body {
+    font-family: Arial, Verdana, Helvetica, Sans-Serif;
+}
+
+.row>.col-xs-2{
+    margin-top:-10px;
+}
+
+/*--------QUITAMOS LOS BULLETS DE TODO EL DOCUMENTO-----------*/
+li {
+    list-style: none;
+}
+
+input, select {
+    vertical-align: baseline;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/*----CREAMOS LA CABECERA, DONDE SE HALLARÁ EL LOGO Y EL MENÚ DE NAVEGACIÓN-------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+.cabecera {
+    background: url('../img/header_bg_run.jpg') repeat-x;
+    color: white;
+    font-size: 1.1em;
+    height: 50px;
+}
+
+/*----DENTRO DE LA CABECERA DEFINIMOS UN CONTENEDOR DONDE INCLUIR LOS CONTENIDOS----------------------*/
+.cabecera {
+    width: 100%;	
+    height: 50px;
+    padding: 15px;
+
+}
+
+.container{
+    width: 1200px !important;
+}
+
+/*-------DEFINIMOS UN ESTILO ESPECIAL PARA EL LOGO-----*/
+.cabecera  b{
+    font-size: 1.75em;
+    font-family: verdana;
+}
+
+/*-------ESPACIAMOS LEVEMENTE LOS ELEMENTOS DEL SISTEMA DE NAVEGACIÓN Y QUITAMOS LA LÍNEA DEL ENLACE-----*/
+.cabecera  #menu a {
+    padding-right: 6px;
+    padding-left: 6px;
+    text-decoration: none;
+}
+
+/*-------CAMBIAMOS EL COLOR DE LOS ENLACES DEL SISTEMA DE NAVEGACIÓN-----*/
+#menu>ul>li>a:link, #menu>ul>li>a:visited {
+    color: rgb(149,202,234);
+}
+
+/*-------CREAMOS EL EFECTO 'HUNDIDO'-----*/
+#menu>ul>li>a:hover {
+    background: rgb(4,72,114);
+    border-top: rgb(0,40,64) solid 1px; 
+    border-left: rgb(2,66,106) solid 1px;
+    border-right: rgb(2,66,106) solid 1px;
+    border-bottom: rgb(7,115,182) solid 1px;
+    border-radius: 4px 4px 1px 1px;
+}
+
+/*-------DE ESTA MANERA GARANTIZAMOS QUE EL ESPACIADO ENTRE LOS ELEMENTOS DEL SISTEMA DE NAVEGACIÓN SEA SIEMPRE EL MISMO
+INDEPENDIENTEMENTE DEL EFECTO HUNDIMIENTO----*/
+#menu>ul>li>a {
+    border: rgba(0,0,0,0) solid 1px; 
+}
+
+/*--------PARA EVITAR QUE LOS ELEMENTOS DEL SISTEMA DE NAVEGACIÓN APAREZCAN VERTICALMENTE, UTILIZAMOS UN FLOAT-----------*/
+ul li {
+    float:left;
+}
+
+/*------------CREAMOS EL EFECTO GRADIENTE DE LOS SUB-MENUS DEL SISTEMA DE NAVEGACIÓN------------------------*/
+
+.menudegradado {
+
+    height: auto;
+    width: 115px;
+    font-size: small;
+    background-image: linear-gradient(bottom, rgb(1,37,59) 5%, rgb(3,96,152) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(1,37,59) 5%, rgb(3,96,152) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(1,37,59) 5%, rgb(3,96,152) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(1,37,59) 5%, rgb(3,96,152) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(1,37,59) 5%, rgb(3,96,152) 100%);
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.05, rgb(1,37,59)),
+        color-stop(1, rgb(3,96,152))
+        );
+
+    -moz-box-shadow:    1px 1px 3px 3px #ccc;
+    -webkit-box-shadow: 1px 1px 3px 3px #ccc;
+    box-shadow:   1px 1px 3px 3px #ccc;
+    color: white;
+    white-space:nowrap;
+}
+
+
+/*----------GENERAMOS UN POCO DE HUECO ENTRE LOS ÍTEMS DEL MENÚ-------*/
+
+ul li ul li {
+    margin-left: -35px;
+    margin-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/*--------------DEFINIMOS DÓNDE APARECERÁN LOS SUBMENÚS DEL SISTEMA DE NAVEGACIÓN----------*/
+#menu ul li  {
+    position:relative;
+}
+
+#menu ul li ul {
+    position:absolute;
+    z-index:101;
+    display:none;
+
+}
+
+/*-------------CUANDO SITUEMOS EL RATÓN SOBRE EL ENLACE O SOBRE EL SUBMENÚ APARECERÁ EL SUBMENÚ-------------*/
+#menu ul li:hover ul, #menu ul li a:hover ul {
+    display: block;
+}
+
+/*----------DEFINIMOS EL COLOR DE LOS ELEMENTOS DEL SUBMENÚ-------*/
+#menu ul li ul a {
+    color: white;
+}
+
+/*----------CUANDO SITUEMOS EL CURSOR SOBRE LOS ELEMENTOS SE SUBRAYARÁN-------*/
+#menu ul li ul a:hover {
+    text-decoration: underline;
+}
+
+/*-------DEFINIMOS EL ESTILO DE LOS ELEMENTOS DE REGISTRO--------*/
+
+.registro a{
+    font-size: small;
+}
+
+.registro a:link{
+    color: white;
+}
+
+.registro a:visited {
+    color:white;
+}
+
+.registro a:hover{
+    color: #AAA;
+    text-decoration: none;
+}
+
+
+/*----------------CUANDO SITUEMOS EL CURSOR SOBRE LA LUPA APARECERÁ EL FORMULARIO DE BÚSQUEDA------------*/
+.busqueda:hover span {
+    display: block;
+}
+
+/*------------DEFINIMOS LA APARIENCIA y UBICACIÓN QUE TENDRÁ EL FORMULARIO DE BÚSQUEDA-----------*/
+.busqueda{
+    position:relative;
+}
+
+.busqueda span {
+    position: absolute;
+    right: 0px;
+    height: auto;
+    width: 290px;
+    padding: 10px;
+    background: url('../img/header_bg_run.jpg') repeat-x;
+    display: none;
+}
+
+
+
+.icono{
+    width: 20px;
+}
+
+#fondo{
+    background: rgb(170,214,250) url("../img/top_bg.png") repeat-x top left;
+    height: 300px;
+    width: 100%;
+    border-bottom: 3px solid blue;
+}
+
+#imagen_central{
+    width: 965px;
+    height: 431px;
+    position: relative;
+    margin: 0 auto;
+    background: transparent url("../img/imagen_central.png") no-repeat;
+}
+
+#imagen_persona{
+    position: absolute;
+    top: 60px;
+    left: -40px;
+    width: 144px;
+    height: 144px;
+    background: transparent url("../img/runner.png") no-repeat;
+}
